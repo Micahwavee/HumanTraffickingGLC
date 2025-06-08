@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Human Trafficking Quiz</title>
+  <style>
+    body {
+      background-color: #001100;
+      font-family: Arial, sans-serif;
+      color: #ccffcc;
+      padding: 0;
+      margin: 0;
+    }
+    header {
+      background-color: #00cc00;
+      color: black;
+      padding: 30px 20px;
+      text-align: center;
+    }
+    nav {
+      background-color: #003300;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: #99ff99;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    h1 {
+      text-align: center;
+      margin: 20px 0;
+      color: #ffffff;
+    }
+    .quiz-container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: #002200;
+      padding: 20px;
+      border-radius: 10px;
+      border: 2px solid #00cc00;
+    }
+    .question {
+      margin-bottom: 20px;
+    }
+    .question p {
+      font-weight: bold;
+    }
+    button {
+      background-color: #00cc00;
+      color: black;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+    button:hover {
+      background-color: #00e600;
+    }
+    .score {
+      margin-top: 20px;
+      font-size: 1.2em;
+      font-weight: bold;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Human Trafficking Quiz</h1>
+    <p>Test your knowledge and learn the facts.</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="charities.html">Charities</a>
+    <a href="quiz.html">Quiz</a>
+  </nav>
+
+  <div class="quiz-container">
+    <form id="quizForm">
+      <div class="question">
+        <p>1. What is human trafficking?</p>
+        <label><input type="radio" name="q1" value="a" /> Transporting goods illegally</label><br>
+        <label><input type="radio" name="q1" value="b" /> The exploitation of people for profit</label><br>
+        <label><input type="radio" name="q1" value="c" /> A type of migration</label><br>
+        <label><input type="radio" name="q1" value="d" /> Moving people across borders with permission</label>
+      </div>
+
+      <div class="question">
+        <p>2. Which group is most vulnerable to trafficking?</p>
+        <label><input type="radio" name="q2" value="a" /> Middle-aged men</label><br>
+        <label><input type="radio" name="q2" value="b" /> Children and women in poverty</label><br>
+        <label><input type="radio" name="q2" value="c" /> Celebrities</label><br>
+        <label><input type="radio" name="q2" value="d" /> Tourists</label>
+      </div>
+
+      <div class="question">
+        <p>3. What can you do to help stop trafficking?</p>
+        <label><input type="radio" name="q3" value="a" /> Spread awareness and support anti-trafficking charities</label><br>
+        <label><input type="radio" name="q3" value="b" /> Avoid traveling</label><br>
+        <label><input type="radio" name="q3" value="c" /> Buy more online</label><br>
+        <label><input type="radio" name="q3" value="d" /> Keep quiet about it</label>
+      </div>
+
+      <div class="question">
+        <p>4. What is the most common form of trafficking?</p>
+        <label><input type="radio" name="q4" value="a" /> Organ trafficking</label><br>
+        <label><input type="radio" name="q4" value="b" /> Forced labour</label><br>
+        <label><input type="radio" name="q4" value="c" /> Child soldiering</label><br>
+        <label><input type="radio" name="q4" value="d" /> Identity theft</label>
+      </div>
+
+      <div class="question">
+        <p>5. Which continent has the highest rate of modern slavery per capita?</p>
+        <label><input type="radio" name="q5" value="a" /> Europe</label><br>
+        <label><input type="radio" name="q5" value="b" /> Asia</label><br>
+        <label><input type="radio" name="q5" value="c" /> Africa</label><br>
+        <label><input type="radio" name="q5" value="d" /> Australia</label>
+      </div>
+
+      <div class="question">
+        <p>6. What international day focuses on human trafficking awareness?</p>
+        <label><input type="radio" name="q6" value="a" /> July 30</label><br>
+        <label><input type="radio" name="q6" value="b" /> March 8</label><br>
+        <label><input type="radio" name="q6" value="c" /> January 26</label><br>
+        <label><input type="radio" name="q6" value="d" /> December 10</label>
+      </div>
+
+      <div class="question">
+        <p>7. What hotline operates in the United States to report trafficking?</p>
+        <label><input type="radio" name="q7" value="a" /> 000</label><br>
+        <label><input type="radio" name="q7" value="b" /> 911</label><br>
+        <label><input type="radio" name="q7" value="c" /> 1-888-373-7888</label><br>
+        <label><input type="radio" name="q7" value="d" /> 1800-RESCUE</label>
+      </div>
+
+      <div class="question">
+        <p>8. Which of the following is a sign of trafficking?</p>
+        <label><input type="radio" name="q8" value="a" /> Someone with no personal ID or documents</label><br>
+        <label><input type="radio" name="q8" value="b" /> Loud talking in public</label><br>
+        <label><input type="radio" name="q8" value="c" /> Wearing sunglasses at night</label><br>
+        <label><input type="radio" name="q8" value="d" /> Having tattoos</label>
+      </div>
+
+      <button type="button" onclick="checkAnswers()">Submit Answers</button>
+    </form>
+
+    <div class="score" id="result"></div>
+  </div>
+
+  <script>
+    function checkAnswers() {
+      const answers = {
+        q1: "b",
+        q2: "b",
+        q3: "a",
+        q4: "b",
+        q5: "c",
+        q6: "a",
+        q7: "c",
+        q8: "a",
+      };
+
+      let score = 0;
+      for (let q in answers) {
+        const selected = document.querySelector(`input[name="${q}"]:checked`);
+        if (selected && selected.value === answers[q]) {
+          score++;
+        }
+      }
+
+      document.getElementById("result").textContent = `You got ${score} out of ${Object.keys(answers).length} correct.`;
+    }
+  </script>
+</body>
+</html>
